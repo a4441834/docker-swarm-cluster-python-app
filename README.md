@@ -48,7 +48,9 @@ $eval $(docker-machine env myvm1)
 $docker-machine ls 
 
 Status should be return as  :
+
 $ docker-machine ls
+
 NAME    ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER     ERRORS
 myvm1   *        virtualbox   Running   tcp://192.168.99.103:2376           v19.03.1   
 myvm2   -        virtualbox   Running   tcp://192.168.99.104:2376           v19.03.1   
@@ -64,6 +66,7 @@ Step 8: Verify the app stack deployment
 $docker stack ps getstartedlab
 
 $ docker stack ps getstartedlab
+
 ID                  NAME                   IMAGE                                 NODE                DESIRED STATE       CURRENT STATE            ERROR               PORTS
 9yimdjqhzyfv        getstartedlab_web.1    docker/image:tag   myvm2               Running             Running 54 seconds ago                       
 0x1sedlkm800        getstartedlab_web.2    docker/image:tag   myvm2               Running             Running 54 seconds ago                       
