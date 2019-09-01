@@ -88,8 +88,9 @@ http://192.168.99.103:4000
 	Visits: cannot connect to Redis, counter disabled
 	
 	
-! [Note : The above deployment works per the diagram provided in the link ->]  https://docs.docker.com/engine/swarm/images/ingress-routing-mesh.png
+! [Note : The above deployment works per the diagram provided in the link ->]  (https://docs.docker.com/engine/swarm/images/ingress-routing-mesh.png)
 
+![AWS VPC and EC2 Reference Architecture](https://niyazierdogan.files.wordpress.com/2018/12/terraform-aws-vpc-and-ec2-architecture.png)
 ￼￼￼
 
 ##Step 10: To scale up or down 
