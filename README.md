@@ -1,10 +1,11 @@
-Docker Swarm Cluster to test the routing mesh:
+Docker Swarm Cluster setup and testing the routing mesh:
 
 Assumptions: 
+
 a) Installed VirtuallBox and Docker desktop or docker toolkit, 
-b) Have verified docker hub login, 
-c) Able to pull and push images against docker hub
-d) Created an docker image with sample python REST example from this link ->https://docs.docker.com/get-started/part2/…
+b) Have verified docker-hub login and ready, 
+c) Able to pull and push the docker images against docker hub
+d) Created an docker image with sample python REST apps by following steps given in this link ->https://docs.docker.com/get-started/part2/…
  
 
 Step 1: Create VMs
@@ -34,7 +35,7 @@ Step 5: Verify the status of leader node and nodes
 
 $docker-machine ssh myvm1 "docker node ls"
 
-Result: should be as below 
+The status should be return as below 
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
 xylk554239g5ycyzcgxx3jv8n *   myvm1               Ready               Active              Leader              19.03.1
 w5eo29yhxiaf68xtgzi8zp3gc     myvm2               Ready               Active              Reachable           19.03.1
@@ -46,7 +47,7 @@ $docker-machine env myvm1
 $eval $(docker-machine env myvm1)
 $docker-machine ls 
 
-status should be :
+Status should be return as  :
 $ docker-machine ls
 NAME    ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER     ERRORS
 myvm1   *        virtualbox   Running   tcp://192.168.99.103:2376           v19.03.1   
@@ -75,14 +76,18 @@ i5t6x55pu95q        getstartedlab_web.7    docker/image:tag   myvm3             
 xf2e7e2eprd1        getstartedlab_web.9    docker/image:tag   myvm3               Running             Running 56 seconds ago                       
 r7twu18h7izo        getstartedlab_web.10   docker/image:tag   myvm1               Running             Running 52 seconds ago
 
-Step 9: Test the app url using swarm cluster ip  address with the port 4000 and continue to refresh the page, on each refresh hostname name get changed.
+Step 9: Test the app url using swarm cluster ip  address with the port 4000 and continue to refresh the page, on each click the hostname name gets changed as you notice.
 
-￼
+http://192.168.99.103:4000 
 
-Info : the above deployment works per the diagram detailed below
+	Hello World!
+	Hostname: 66aa9321f4c3
+	Visits: cannot connect to Redis, counter disabled
+	
+	
+Note : The above deployment works per the diagram provided in the link ->  https://docs.docker.com/engine/swarm/images/ingress-routing-mesh.png
 
-￼
-
+￼￼￼
 
 Step 10: To scale up or down 
 
