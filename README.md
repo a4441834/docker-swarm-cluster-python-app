@@ -88,7 +88,7 @@ http://192.168.99.103:4000
 	Visits: cannot connect to Redis, counter disabled
 	
 	
-Note : The above deployment works per the diagram provided in the link ->  https://docs.docker.com/engine/swarm/images/ingress-routing-mesh.png
+![Note : The above deployment works per the diagram provided in the link ->]  https://docs.docker.com/engine/swarm/images/ingress-routing-mesh.png
 
 ￼￼￼
 
